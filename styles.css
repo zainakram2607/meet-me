@@ -570,6 +570,274 @@ footer .icon {
 }
 
 
+@media (max-width: 425px){
+  .container {
+    max-width: 375px;
+    padding-left: 15px;
+    padding-right: 15px;
+    --mar: calc(100% - 375px);
+    margin: calc(var(--mar) / 2);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .introduction h3 {
+    font-size: 24px;
+  }
+
+  .introduction h6 {
+    margin-top: 12px;
+  }
+
+  .introduction h4 {
+    font-size: 17px;
+  }
+
+  .introduction ul {
+    padding-left: 0px;
+  }
+
+  .introduction a {
+    padding-right: 20px;
+  }
+
+  .personal-img {
+    max-width: 80%;
+  }
+
+  .welcome p {
+    margin: 0px;
+    text-align: center;
+  }
+
+  .about h4 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .future-area h2 {
+    font-size: 24px;
+  }
+
+  .future-area ul li {
+    margin-right: 10px;
+  }
+
+  .navbar {
+    max-width: 375px;
+    --mar: calc(100% - 375px);
+    margin: calc(var(--mar) / 2);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .home-banner {
+    position: relative;
+    /* top: -200px; */
+    background-image: none;
+    height: 1073px;
+    margin: 0px;
+  }
+
+  .home-banner .container {
+    max-width: 768px;
+    position: relative;
+    bottom: 0px;
+    height: 850px;
+    border-radius: 0px;
+    background-color: white;
+    margin: 0px;
+  }
+
+  .home-banner {
+    height: 768px;
+  }
+}
+
+@media (max-width: 375px){
+  .container {
+    max-width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+    --mar: calc(100% - 320px);
+    margin: calc(var(--mar) / 2);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .introduction h3 {
+    font-size: 20px;
+  }
+
+  .introduction h6 {
+    margin-top: 12px;
+  }
+
+  .introduction h4 {
+    font-size: 15px;
+  }
+
+  .introduction ul {
+    padding-left: 0px;
+  }
+
+  .introduction li {
+    font-size: 14px;
+  }
+
+  .introduction a {
+    padding-right:5px;
+  }
+
+  .personal-img {
+    max-width: 80%;
+  }
+
+  .welcome p {
+    margin: 0px;
+    text-align: center;
+  }
+
+  .about h4 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .future-area h2 {
+    font-size: 24px;
+  }
+
+  .future-area ul li {
+    margin-right: 10px;
+  }
+
+  .navbar {
+    max-width: 325px;
+    --mar: calc(100% - 325px);
+    margin: calc(var(--mar) / 2);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .home-banner {
+    position: relative;
+    /* top: -200px; */
+    background-image: none;
+    height: 1073px;
+    margin: 0px;
+  }
+
+  .home-banner .container {
+    max-width: 768px;
+    position: relative;
+    bottom: 0px;
+    height: 780px;
+    border-radius: 0px;
+    background-color: white;
+    margin: 0px;
+  }
+
+  .home-banner {
+    height: 768px;
+  }
+}
+
+@media (max-width: 320px){
+  .container {
+    max-width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    --mar: calc(100% - 200px);
+    margin: calc(var(--mar) / 2);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .introduction h3 {
+    font-size: 20px;
+  }
+
+  .introduction h6 {
+    margin-top: 12px;
+  }
+
+  .introduction h4 {
+    font-size: 15px;
+  }
+
+  .introduction ul {
+    padding-left: 0px;
+  }
+
+  .introduction li {
+    font-size: 14px;
+  }
+
+  .introduction a {
+    padding-right:5px;
+  }
+
+  .personal-img {
+    max-width: 80%;
+  }
+
+  .welcome p {
+    margin: 0px;
+    text-align: center;
+  }
+
+  .about h4 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .future-area h2 {
+    font-size: 24px;
+  }
+
+  .future-area h4 {
+    font-size: 18px;
+  }
+
+  .inner-item {
+    padding: 5px;
+  }
+
+
+  .future-area ul li {
+    margin-right: 10px;
+  }
+
+  .navbar {
+    max-width: 200px;
+    --mar: calc(100% - 200px);
+    margin: calc(var(--mar) / 2);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .home-banner {
+    position: relative;
+    /* top: -200px; */
+    background-image: none;
+    height: 1073px;
+    margin: 0px;
+  }
+
+  .home-banner .container {
+    max-width: 768px;
+    position: relative;
+    bottom: 0px;
+    height: 780px;
+    border-radius: 0px;
+    background-color: white;
+    margin: 0px;
+  }
+
+  .home-banner {
+    height: 768px;
+  }
+}
 
 
 
