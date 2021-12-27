@@ -359,11 +359,15 @@ footer .icon {
     margin-bottom: 0;
   }
 
+  .home-banner {
+    height: 400px
+  }
+
   .home-banner .container {
     max-width: 992px;
     position: relative;
     bottom: -80px;
-    height: 760px;
+    height: 500px;
     padding: 30px;
     border-radius: 10px;
     background-color: white;
@@ -406,7 +410,7 @@ footer .icon {
     max-width: 992px;
     position: relative;
     bottom: -30px;
-    height: 1073.030px;
+    height: 550px;
     padding: 30px;
     border-radius: 10px;
     background-color: white;
@@ -421,7 +425,7 @@ footer .icon {
     /* top: -200px; */
     background-image: linear-gradient(to right, #766DFD, #88F3FE);
     background-color: #777777;
-    height: 1023px;
+    height: 500px;
     margin: 0 0 70px 0;
   }
 
@@ -466,7 +470,7 @@ footer .icon {
     max-width: 768px;
     position: relative;
     bottom: -30px;
-    height: 1073.030px;
+    height: 830px;
     padding: 30px;
     border-radius: 10px;
     background-color: white;
@@ -474,6 +478,10 @@ footer .icon {
     margin: calc(var(--mar) / 2);
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .home-banner {
+    height: 768px
   }
 
 }
@@ -505,7 +513,7 @@ footer .icon {
     max-width: 576px;
     position: relative;
     bottom: -30px;
-    height: 1073.030px;
+    height: 768px;
     padding: 30px;
     border-radius: 10px;
     background-color: white;
@@ -548,10 +556,14 @@ footer .icon {
     max-width: 768px;
     position: relative;
     bottom: 0px;
-    height: 1073.030px;
+    height: 768px;
     border-radius: 0px;
     background-color: white;
     margin: 0px;
+  }
+
+  .home-banner {
+    height: 768px;
   }
 
 
