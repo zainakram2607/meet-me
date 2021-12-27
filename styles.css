@@ -837,6 +837,10 @@ footer .icon {
   .home-banner {
     height: 768px;
   }
+
+  footer input {
+    width: auto;
+  }
 }
 
 
