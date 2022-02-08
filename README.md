@@ -1,23 +1,17 @@
 # DevsincBlogApp
 
-database\_rewinder is a minimalist's tiny and ultra-fast database cleaner.
+DevsincBlogApp is a training project built on ruby on rails.
 
 ## Features
 
-* Cleans up tables via DELETE SQL. No other strategies are implemented ATM
-* Supports multiple databases
-* Runs extremely fast :dash:
+* Create a blog post
+* Multiple attachments features
+* Socialising...
 
-## Why is it fast?
-
-database\_rewinder memorizes every table name into which `INSERT` SQL was performed during each test case.
-Then it executes `DELETE` SQL only against these tables when cleaning.
-So, the more number of tables you have in your database, the more benefit you will get.
-Also, database\_rewinder joins all `DELETE` SQL statements and casts it in one DB server call.
 
 ### Credit
 
-This strategy was originally devised and implemented by Shingo Morita (@eudoxa) at COOKPAD Inc.
+This project is built by zain.akram@devsinc.com
 
 ## Supported versions
 
@@ -26,6 +20,8 @@ This strategy was originally devised and implemented by Shingo Morita (@eudoxa) 
 * Rails 5.2.6
 
 * PostgreSQL 14.1
+
+* Bundler version 2.3.5
 
 ## Installation
 
@@ -36,6 +32,4 @@ Add this line to your Gemfile's `:test` group:
 And then execute:
 
     $ bundle
-
-## Usage
-
+    
