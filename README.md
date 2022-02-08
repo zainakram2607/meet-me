@@ -25,11 +25,17 @@ This project is built by zain.akram@devsinc.com
 
 ## Installation
 
-Add this line to your Gemfile's `:test` group:
+After installing ruby 2.6.6, rails 5.2.6 run the following commands
 
-    gem 'database_rewinder'
+    $ bundle install
 
 And then execute:
 
-    $ bundle
+    $ rails db:create
+    
+    $ rails db:seed
+    
+    $ rails db:migrate
+    
+    $ rails server
     
