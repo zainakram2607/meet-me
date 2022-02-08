@@ -29,19 +29,19 @@ After installing ruby 2.6.6, rails 5.2.6 run the following commands
 
     $ bundle install
 
-And then execute:
+And then execute this command Database creation:
 
     $ rails db:create
     
-And then execute:
+And then execute this command for Database seeding:
     
     $ rails db:seed
     
-And then execute:    
+And then execute this command for Database migration:    
     
     $ rails db:migrate
     
-And then execute:
+And then execute this command for running the server:
     
     $ rails server
     
