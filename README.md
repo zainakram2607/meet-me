@@ -33,9 +33,15 @@ And then execute:
 
     $ rails db:create
     
+And then execute:
+    
     $ rails db:seed
     
+And then execute:    
+    
     $ rails db:migrate
+    
+And then execute:
     
     $ rails server
     
