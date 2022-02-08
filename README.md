@@ -1,6 +1,4 @@
-# DatabaseRewinder
-
-[![Build Status](https://github.com/amatsuda/database_rewinder/actions/workflows/main.yml/badge.svg)](https://github.com/amatsuda/database_rewinder/actions)
+# DevsincBlogApp
 
 database\_rewinder is a minimalist's tiny and ultra-fast database cleaner.
 
@@ -23,9 +21,11 @@ This strategy was originally devised and implemented by Shingo Morita (@eudoxa) 
 
 ## Supported versions
 
-* ActiveRecord 4.2, 5.0, 5.1, 5.2, 6.0, 6.1, 7.0 (edge)
+* Ruby 2.6.6
 
-* Ruby 2.4, 2.5, 2.6, 2.7, 3.0, 3.1 (trunk)
+* Rails 5.2.6
+
+* PostgreSQL 14.1
 
 ## Installation
 
@@ -39,95 +39,3 @@ And then execute:
 
 ## Usage
 
-### Basic configuration
-
-Do `clean` in `after(:each)`. And do `clean_all` or `clean_with` in `before(:suite)` if you'd like to.
-
-```ruby
-RSpec.configure do |config|
-  config.before(:suite) do
-    DatabaseRewinder.clean_all
-    # or
-    # DatabaseRewinder.clean_with :any_arg_that_would_be_actually_ignored_anyway
-  end
-
-  config.after(:each) do
-    DatabaseRewinder.clean
-  end
-end
-```
-
-### Dealing with multiple DBs
-
-You can configure multiple DB connections to tell DatabaseRewinder to cleanup all of them after each test.
-In order to add another connection, use `DatabaseRewinder[]` method.
-
-```ruby
-RSpec.configure do |config|
-  config.before(:suite) do
-    # simply give the DB connection names that are written in config/database.yml
-    DatabaseRewinder['test']
-    DatabaseRewinder['another_test_db']
-
-    # you could give the DB name with connection: key if you like
-    DatabaseRewinder[connection: 'yet_another_test_db']
-
-    # or with a meaningless something first, then {connection: DB_NAME} as the second argument (DatabaseCleaner compatible)
-    DatabaseRewinder[:active_record, connection: 'an_active_record_db']
-
-    DatabaseRewinder.clean_all
-  end
-
-  config.after(:each) do
-    DatabaseRewinder.clean
-  end
-end
-```
-
-### MySQL + use\_transactional\_tests Specific Problems
-
-database\_rewinder tries to create a new DB connection for deletion when you're running tests on MySQL.
-You would occasionally hit some weird errors (e.g. query execution timeout) because of this, especially when your tests are run with the `use_transactional_tests` option enabled (which is Rails' default).
-
-#### 1. Properly understand what `use_transactional_tests` means, and consider turning it off
-
-`use_transactional_tests` is the option that surrounds each of your test case with a DB transaction to roll back all your test data after each test run.
-So far as this works properly, you won't really need to use database\_rewinder.
-However, this simple mechanism doesn't work well when you're running integration tests with capybara + js mode.
-In cases of this situation, bundle database\_rewinder and add the following configuration.
-
-```ruby
-RSpec.configure do |config|
-  config.use_transactional_tests = false
-
-  ...
-end
-```
-
-#### 2. Cleaning with `multiple: false` option
-If you're really sure you need to keep using transactional tests + database\_rewinder for some reason, then explicitly pass in `multiple: false` option to `DatabaseRewinder.clean_all` and `DatabaseRewinder.clean` invocations as follows. Note that you won't be able to get full performance merit that database\_rewinder provides though.
-
-```ruby
-RSpec.configure do |config|
-  config.before :suite do
-    DatabaseRewinder.clean_all multiple: false
-  end
-
-  config.after :each do
-    DatabaseRewinder.clean multiple: false
-  end
-end
-```
-
-### Pro Tip
-
-database\_rewinder is designed to be almost compatible with database\_cleaner.
-So the following code will probably let your existing app work under database\_rewinder without making any change on your configuration.
-
-```ruby
-DatabaseCleaner = DatabaseRewinder
-```
-
-## Contributing
-
-Send me your pull requests.
